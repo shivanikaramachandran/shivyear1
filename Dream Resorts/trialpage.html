@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
+    <title>Hotel Booking</title>
+</head>
+<body class="bg-gray-100">
+
+<div x-data="hotelBooking()" x-init="loadFromLocalStorage">
+    <div class="container mx-auto p-4">
+        <h1 class="text-2xl font-semibold mb-4">Hotel Booking</h1>
+
+        <form>
+            <div class="flex space-x-4 mb-4">
+                <div class="flex-1">
+                    <label for="start_date" class="block text-sm font-medium text-gray-700">Check-in Date</label>
+                    <input x-model="startDate" x-on:change="saveToLocalStorage" type="date" id="start_date" name="start_date"
+                           class="mt-1 p-2 block w-full border rounded-md"/>
+                </div>
+
+                <div class="flex-1">
+                    <label for="end_date" class="block text-sm font-medium text-gray-700">Check-out Date</label>
+                    <input x-model="endDate" x-on:change="saveToLocalStorage" type="date" id="end_date" name="end_date"
+                           class="mt-1 p-2 block w-full border rounded-md"/>
+                </div>
+            </div>
+
+            <div class="mb-4">
+                <label for="room_type" class="block text-sm font-medium text-gray-700">Room Type</label>
+                <select x-model="roomType" x-on:change="saveToLocalStorage" id="room_type" name="room_type" class="mt-1 p-2 block w-full border rounded-md">
+                    <option value="single">Single Room</option>
+                    <option value="double">Double Room</option>
+                    <option value="suite">Suite</option>
+                </select>
+            </div>
+
+            <div class="mb-4">
+                <label for="guests" class="block text-sm font-medium text-gray-700">Number of Guests</label>
+                <input x-model="numGuests" x-on:change="saveToLocalStorage" type="number" id="guests" name="guests" min="1"
+                       class="mt-1 p-2 block w-full border rounded-md"/>
+            </div>
+
+            <button type="button" x-on:click="bookRoom"
+                    class="bg-blue-500 text-white p-2 rounded-md hover:bg-blue-600">Book Now
+            </button>
+        </form>
+    </div>
+
+    <script>
+        function hotelBooking() {
+            return {
+                startDate: '',
+                endDate: '',
+                roomType: 'single',
+                numGuests: 1,
+                saveToLocalStorage() {
+                    localStorage.setItem('hotelBooking', JSON.stringify({
+                        startDate: this.startDate,
+                        endDate: this.endDate,
+                        roomType: this.roomType,
+                        numGuests: this.numGuests,
+                    }));
+                },
+                loadFromLocalStorage() {
+                    const storedData = localStorage.getItem('hotelBooking');
+                    if (storedData) {
+                        const { startDate, endDate, roomType, numGuests } = JSON.parse(storedData);
+                        this.startDate = startDate;
+                        this.endDate = endDate;
+                        this.roomType = roomType;
+                        this.numGuests = numGuests;
+                    }
+                },
+                bookRoom() {
+                    // Implement your booking logic here
+                    alert(`Booking confirmed from ${this.startDate} to ${this.endDate} for ${this.roomType} room for ${this.numGuests} guests.`);
+                }
+            };
+        }
+    </script>
+
+</body>
+</html>

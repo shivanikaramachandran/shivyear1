@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="manifest" href="site.webmanifest"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="description" content="Dream Hotels">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <title>Home Page</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+   
+</head>
+<body>
+    <header>
+      <div class="topnav" id="myTopnav">
+        <a href="index.html">Home </a>
+        <a href="DestinationsPage.html">Destinations</a>
+        <a href="AdventurePage.html">Adventures & Entertainment</a>
+        <a href="RestaurantsPage.html">Restaurants & Cuisines</a>
+        <a href="MeetingsPage.html">Meeting & Conference Hall</a>
+        <a href="WeddingsPage.html">Wedding Hall</a>
+        <a href="BookingPage.html">Bookings</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+      
+      
+      
+      <script>
+      function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+          x.className += " responsive";
+        } else {
+          x.className = "topnav";
+        }
+      }
+      </script>
+       <br><br>
+        <picture>
+            <source srcset="Images\booking.jpg" media="(max-width: 400px)">
+            <source srcset="Images\booking.jpg">
+            <img src="Images\booking.jpg" alt="pool">
+          </picture>
+         
+
+    </header>
+<br>
+<!-- logo -->
+    <div>
+      <img src="Images\logo.png" alt="Paris" style="width:10%;">
+    </div>
+
+
+    <section class="about">
+    <div>
+        <h2>Place your Bookings Here!</h2>
+        <p class="p4">Discover our resorts to access special bookings and deals. Take advantage of reduced prices, freebies, and amazing experiences. Make lifelong memories today by making reservations for your ideal vacation.</p>
+        
+    </div>
+</section>
+    <br>
+
+    <h2>Book Your Rooms Here</h2>
+<!-- booking for for rooms -->
+    <section>
+      <div class="container-booking">
+        <form action="sumbittedinfo.lk">
+          <div class="row">
+            <div class="col-25">
+              <label for="fname">First Name</label>
+            </div>
+            <div class="col-75">
+              <input type="text" id="fname" name="firstname" placeholder="Type your first name here">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-25">
+              <label for="lname">Last Name</label>
+            </div>
+            <div class="col-75">
+              <input type="text" id="lname" name="lastname" placeholder="Type your last name here">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="country">Hotel Branch</label>
+            </div>
+            <div class="col-75">
+              <select id="country" name="country">
+                <option value="australia">Colombo</option>
+                <option value="canada">Bentota</option>
+                <option value="usa">Trincomalee</option>
+                <option value="usa">Galle</option>
+
+              </select>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="country">Type of Room</label>
+            </div>
+            <div class="col-75">
+              <select id="country" name="country">
+                <option value="">King Suite</option>
+                <option value="">Deluxe Family Suite</option>
+                <option value="">Double Bed Rooms</option>
+
+              </select>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="country">Number of Rooms (Max. 10 rooms)</label>
+            </div>
+            <div class="col-75">
+              <select id="country" name="country">
+                <option value="">1</option>
+                <option value="">2</option>
+                <option value="">3</option>
+                <option value="">4</option>
+                <option value="">5</option>
+                <option value="">6</option>
+                <option value="">7</option>
+                <option value="">8</option>
+                <option value="">9</option>
+                <option value="">10</option>
+
+
+              </select>
+            </div>
+          </div>
+          
+             <div class="row">
+                <div class="col-25">
+                  <label for="fname">Check-in & Check-out</label>
+                </div>
+                <div class="col-75">
+                  <input type="date" id="date" name="check-in"> <input type="date" id="date" name="Check-out"> 
+                </div>
+              </div>
+            
+        <div class="row">
+          <div class="col-25">
+            <label for="subject">Additional Inquiries </label>
+          </div>
+          <div class="col-75">
+            <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+          </div>
+        </div>
+        <div class="row">
+          <input type="submit" value="Submit">
+        </div>
+        </form>
+        </div>
+      </section>
+<br>
+<!-- booking halls -->
+<h2>Book Your Hall for the Event Here</h2>
+<section>
+  <div class="container-booking">
+    <form action="sumbittedinfo.lk">
+      <div class="row">
+        <div class="col-25">
+          <label for="fname">First Name</label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="fname" name="firstname" placeholder="Type your first name here">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-25">
+          <label for="lname">Last Name</label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="lname" name="lastname" placeholder="Type your last name here">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="country">Hotel Branch</label>
+        </div>
+        <div class="col-75">
+          <select id="country" name="country">
+            <option value="australia">Colombo</option>
+            <option value="canada">Bentota</option>
+            <option value="usa">Trincomalee</option>
+            <option value="usa">Galle</option>
+
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="country">Type of Hall</label>
+        </div>
+        <div class="col-75">
+          <select id="country" name="country">
+            <option value="">Meetings & Conference</option>
+            <option value="">Weddings</option>
+          </select>
+        </div>
+      </div>
+      
+         <div class="row">
+            <div class="col-25">
+              <label for="fname">Event Date</label>
+            </div>
+            <div class="col-75">
+              <input type="date" id="date" name="event-date">  
+            </div>
+            
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label for="subject">Additional Inquiries </label>
+          </div>
+          <div class="col-75">
+            <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+          </div>
+        </div>
+        <div class="row">
+          <input type="submit" value="Submit">
+        </div>
+        
+    </form>
+    </div>
+  </section>
+
+  <br>
+      <section>
+      <p class="p6"> We Guarantee Your Fun-Filled Experience at Dream Resorts!<br>
+      Please contact us to book halls for organizing Events and Food</p>
+    </section>
+    <br>
+
+<!-- footer -->
+
+    <footer class="footer">
+      <div class="section__container footer__container">
+        <div class="footer__col">
+          <h3>Dream Resorts</h3>
+          <p>
+            With the help of the renowned website Dream Resorts, it is simple and easy to locate and reserve lodgings in Sri Lanka.</p>
+          <p>
+            Dream Resorts promises to give guests looking for the ideal stay a stress-free experience with a user-friendly interface and a huge selection of rooms.
+          </p>
+          <p>To get updated information, do follow us on :</p>
+
+          <i class="fab fa-facebook-square"></i>
+            <i class="fab fa-twitter-square"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-youtube"></i>
+
+            <p>0777-353-353</p>
+           <p><a href="mailto:dreamresorts.lk"></a>Mail Us</p>
+           
+        </div>
+        <div class="footer__col">
+          <h4>Company</h4>
+          <p>About Us</p>
+          <p>Our Team</p>
+          <p>Blog</p>
+          <p>Book</p>
+          <p>Contact Us</p>
+        </div>
+        <div class="footer__col">
+          <h4>Legal</h4>
+          <p>FAQs</p>
+          <p>Terms & Conditions</p>
+          <p>Privacy Policy</p>
+        </div>
+        <div class="footer__col">
+          <h4>Resources</h4>
+          <p>Social Media</p>
+          <p>Help Center</p>
+          <p>Partnerships</p>
+        </div>
+      </div>
+      <div class="footer__bar">
+        Copyright © 2023 Web Design Mastery. All rights reserved.
+      </div>
+    </footer>
+
+    </body>
+    </html>
